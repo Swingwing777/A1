@@ -1,0 +1,466 @@
+/*
+Colors used - See :root */
+
+/* /////////////// start with block rules (and block:state rules) /////////// */
+
+:root {
+  --primary-text-color: #545d80;
+  --background-dark: #83a2c7;
+  --background-light: #d7e1ed;
+  --theme-box-shadow: #455363;
+  --button-blue: #0c3c8a;
+  --button-hover-inset-shadow: #a6c1f5;
+  --button-hover-dark-shadow: #364352;
+  --button-visited: #801fe0;
+  --button-active-box-shadow: #000;
+  --grid-background: #f7fafc;
+  --link-visited: #801fe0;
+  --link-active: #bf0000;
+  --horiz-rule-dark: #43566e;
+  --horiz-rule-light: #d7e1ed;
+  --hdg-font-wt: 500;
+  --h1-font-size: 30px;
+  --h2-font-size: 24px;
+  --h3-font-size: 20px;
+  --body-font-size: 16px;
+  --body-font-wt: 400;
+  --body-font-variant: small-caps;
+}
+
+* {
+  /* This ensures all element widths include border and padding width */
+  box-sizing: border-box;
+}
+
+body {
+  /* Background pale blue-blue linear gradient */
+  /* Main font: Montserrat sans serif */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: var(--body-font-wt);
+  font-variant: var(--body-font-variant);
+  font-size: var(--body-font-size);
+  line-height: 1.6;
+  color: var(--primary-text-color);
+  background: var(--background-light);
+}
+/* All headings medium font in reducing size */
+
+h1 {
+  font-weight: var(--hdg-font-wt);
+  font-size: var(--h1-font-size);
+  font-variant: var(--body-font-variant);
+}
+
+h2 {
+  font-weight: var(--hdg-font-wt);
+  font-size: var(--h2-font-size);
+  font-variant: var(--body-font-variant);
+}
+
+h3 {
+  font-weight: var(--hdg-font-wt);
+  font-size: var(--h3-font-size);
+  font-variant: var(--body-font-variant);
+}
+
+div {
+  padding: 10px;
+}
+
+header {
+  padding: 10px;
+  /* max-width limits width of profile element */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 10px;
+  /* max-width limits width of profile element */
+  max-width: 1200px;
+  /* margin: 0 auto centres the max-width on the screen */
+  margin: 0 auto;
+}
+
+footer {
+  padding: 10px;
+  /* max-width limits width of profile element */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+hr {
+  margin: 0 auto;
+  border: 0px;
+  height: 3px;
+  background-image: linear-gradient(to right, var(--horiz-rule-light),var(--horiz-rule-dark),var(--horiz-rule-light));
+}
+
+ul {
+  /* removes bullets and places inline with logo */
+  list-style-type: none;
+  display:inline-block;
+  spaced: 20px;
+}
+
+table {
+  /* 'About' Tables */
+  table-layout: auto;
+  width: 100%;
+  border: 2px solid var(--primary-text-color);
+  border-spacing: 0;
+}
+
+th, td {
+  /* 'About' Tables - Heading cells */
+  border: 0.5px solid var(--primary-text-color);
+}
+
+a {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  transition: all 1s ease;
+}
+
+a:visited {
+  /* change color when user visits link */
+  color: var(--link-visited);
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  /* remove underline/change colour
+  on hover or focus */
+  text-decoration: underline;
+}
+
+a:active {
+  /* selected link color */
+  color: var(--link-active);
+}
+
+button,
+.button1 {
+  /* this overrides default browser styling and adds bespoke styling */
+  border: none;
+  /* takes the font from the outer container */
+  font-family: inherit;
+  /* styles the background color, font color, and text decoration of the button */
+  width: 120px;
+  height: 25px;
+  background-color: var(--button-blue);
+  color: white;
+  font-size: 7;
+  padding: 5px;
+  border-radius: 5%;
+  text-shadow: none;
+  text-decoration: none;
+  box-shadow: 2px 2px 5px var(--theme-box-shadow);
+  transition: all 2.0s ease-in-out;
+}
+
+button:hover, button:focus,
+.button1:hover,
+.button1:focus {
+  /* cursor changes to hand on hover */
+  cursor: pointer;
+  opacity: 0.8;
+  /* increase button brightness to 120% */
+  filter: brightness(1.2);
+  box-shadow:
+    /* gives the button a blurred (semi-embossed effect) */
+    4px 0px 2px 0px var(--button-hover-inset-shadow) inset, /* left lighter shade */
+    0px 3px 5px 0px var(--button-hover-inset-shadow) inset, /* top lighter shade*/
+    4px 0px 6px 0px var(--button-hover-dark-shadow), /* right */
+    0px 4px 7px 0px var(--button-hover-dark-shadow);  /* bottom */;
+}
+
+button:active,
+.button1:active {
+  /* filter darkens button and reverses shading for push-in effect.
+  Alternative is to use opacity, but relies on page background birghtness for effect */
+  filter: brightness(0.5);
+  box-shadow: -1px 0px 2px var(--button-active-box-shadow) inset,
+  0px -1px 2px var(--button-active-box-shadow) inset;
+  border:none;
+}
+
+/*  /////////////continue with class rules/////////////// */
+/* Note BEM naming practice for classes */
+
+.experience,
+.qualification {
+  clear: both;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  text-align: center;
+}
+
+.page-header {
+  /* allows (but does not compel) header to use up to 100% of screen width */
+  clear: both;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+}
+
+.page-header__item {
+  /*-- All header items: Grow No, Shrink Yes, Base Width 200px */
+  flex: 0 1 200px;
+}
+
+.page-header__item:last-child {
+  /* Navigation bar is last item in header (pseudo-selector used).
+  Allowed to grow (by CSS cascade overruling earlier property),
+  and aligned to the right */
+  flex-grow: 1;
+  text-align: right;
+}
+
+.nav_hdgs {
+/* need to removed default hyperlink styling, to provide contrast */
+  font-size: 14px;
+  font-variant: small-caps;
+  line-height: 1.6;
+  font-color: var(--primary-text-color);
+  display: inline-block;
+  margin: auto;
+}
+
+.navigation-list {
+  /* this places navigation inline with logo
+   - ie block element above in html file*/
+  display: inline-block;
+  list-style-type: none;
+}
+
+.navigation-list li {
+  /* To target nested list without an assigned class within parent's class */
+  /* List arranged and spaced as row instead of default column */
+  display: inline-block;
+  align-content:center;
+  margin-left: 20px;
+}
+
+.dubai {
+  /* this clears (amnogst other properties) max-width, as incompatible with display-flex.
+  So need to limit max width within .svg instead.  Trying to re-add max-width here will stop flex */
+  clear: both;
+  /* max-width limits width of profile element */
+  display: flex;
+  flex-basis:1200px;
+  /* width of image needs to be limted to 1200px within svg */
+  /* flex allows dubai image to shrink when display area shrunk.*/
+  justify-content: center;
+}
+
+.contactinfo__detail {
+  display: inline-block;
+}
+
+.page-footer {
+  /* this clears any floating rules in footer */
+  clear: both;
+  /* this applies flexbox to footer (later grid built within)*/
+  display: flex;
+  text-align: center;
+  /* Heading & Social Media icons are separate blocks */
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* //////////////// Grid Details Here ////////////////// */
+
+/* Grid fallback must go first to allow for cascade effect
+  Traditional solution: display inline-block plus 33% width */
+
+.grid__item,
+.contactinfo__item,
+.contactinfo__item {
+  /* Grid fallback */
+  display: inline-block;
+  width: 33%
+}
+
+/*  CSS grids must be written
+beneath respective Grid Fallback */
+
+.grid {
+  /* Work Grid */
+  display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.grid__item {
+  background-color: var(--grid-background);
+  /* width set to auto to overwrite grid fallback width 33% */
+  width: auto;
+  box-shadow: 2px 2px 5px var(--theme-box-shadow);
+}
+
+.grid__item:last-child {
+  /* This gives greater prominance to latest project by creating grid area */
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.contactinfo {
+  /* Contact Grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.contactinfo__item {
+  background-color: var(--grid-background);
+  /* width set to auto to overwrite grid fallback width 33% */
+  width: auto;
+  text-align: center;
+  box-shadow: 2px 2px 5px var(--theme-box-shadow);
+}
+
+.grid-social-media {
+  /* Social Media icon grid */
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 30px;
+  text-align: center;
+  justify-content: center;
+}
+
+.grid-social-media__item {
+  /* width set to auto to overwrite grid fallback width 33% */
+  width: auto;
+}
+
+/* /////////// - End of grid rules - ///////////// */
+
+/* ////////////// ID rules follow class rules ////////////// */
+
+#page-header__logo {
+  /* this adds a blurred shadow to my plain logo background */
+  box-shadow: 4px 4px 5px var(--theme-box-shadow);
+  position:relative;
+  top: 20px;
+  left: 20px;
+  transition-property: all 2.0 ease-in-out;
+}
+
+#page-header__logo:hover, #page-header__logo:focus {
+  box-shadow: 5px 5px 8px var(--button-hover-dark-shadow);
+}
+
+#profile_photo {
+  /* this floats image and creates soft shadow */
+  float: left;
+  margin-left: 20%;
+  margin-right: 80px;
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 4px 4px 5px var(--theme-box-shadow);
+}
+
+#background {
+  box-shadow: 4px 4px 5px var(--theme-box-shadow);
+}
+
+/* //////////////// animations ///////////////////// */
+
+/* animation for dubai_sunset_X1/X2.svg */
+
+@keyframes rocketman-move {
+  0% {
+      transform: translate(0px, 0px);
+      /* start point to right - not visible */
+    }
+  98% {
+      transform: translate(-5000px, 40px);
+      /* right to left, slighty descending - to out of sight left */
+    }
+  99% {
+      transform: translate(-6000px, -500px);
+      /* vertically up page - out of sight */
+    }
+  100% {
+    /*  right to left out of sight, then down to start point */
+    transform: translate(0px, -500px);
+    }
+  }
+
+@keyframes B777-move {
+0% {
+    transform: translate(0px, 0px);
+    /* start point to right (origin defined as X=2500 in .svg) - not visible */
+  }
+98% {
+    transform: translate(-3000px, 40px);
+    /* right to left, slighty descending - to out of sight left */
+  }
+99% {
+    transform: translate(-3000px, -500px);
+    /* vertically up page - out of sight */
+  }
+100% {
+  /*  right to left out of sight, then down to start point */
+  transform: translate(0px, -500px);
+  }
+}
+
+#B777 {
+  animation: 10s infinite B777-move linear;
+  /*  Note: B777 starts from outside right edge of viewport, translates across Background
+  until outside left edge of viewpoint, and then translates out of sight back to origin,
+  which has been adjusted within svg to sit outside viewport */
+}
+
+#rocketman {
+  animation: 10s infinite rocketman-move linear;
+  /*  Note: B777 starts from outside right edge of viewport, translates across Background
+  until outside left edge of viewpoint, and then translates out of sight back to origin,
+  which has been adjusted within svg to sit outside viewport */
+}
+
+/* ///////////// Media Queries come last of all ///////////// */
+
+@media all and (max-width: 500px) {
+  /* only add details that need changing from original grid definition */
+  .grid {
+    /* this changes grid to single column and reduces spacing */
+    grid-template-columns: 1fr;
+  }
+}
+@media all and (min-width: 500px) and (max-width: 750px) {
+  /* only add details that need changing from original grid definition */
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 750px) {
+  .grid {
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    /* this removes grid area on screens 500px to 750px
+    by allowing browser to decide start-end points */
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    /* this reduces heading 1 font size */
+    font-size: 22px;
+  }
+  .dubai {
+    flex-basis:400px;
+    /* flex allows dubai image to shrink when display area shrunk.*/
+  }
+}

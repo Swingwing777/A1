@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Contacts | Exercise 1.5</title>
+  <link rel="shortcut icon" href="img/RAF_favicon-16x16.png">
+  <link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+/* /////////////////// items removed from main pages ////////////////////// */
+
+<body>
+  <a href="#">
+    <button type="button">LAUNCH</button>
+  </a>
+
+  <a href="##">
+    <button class="button__secondary" type="button">ABORT</button>
+  </a>
+</body>
+</html>
+
+
+@media all and (min-width: 500px) and (max-width: 750px) {
+  /* only add details that need changing from original grid definitiion */
+  .grid {
+    display: grid;
+    /* this changes grid to two columns and reduces spacing */
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
+
+  .grid__item:last-child {
+    /* this removes grid area on screens 500px to 750px
+    by allowing browser to decide start-end points */
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    /* this reduces heading 1 font size */
+    font-size: 22px;
+  }
+
+
+  .dubai {
+    clear: both;
+    /* max-width limits width of profile element */
+    display: flex;
+    /* margin: 0 auto centres the max-width on the screen */
+    justify-content: space-around;
+  }
+
+/* this allowed svg to display, but no animation worked */
+  <object class="dubai" type="image/svg+xml" data="img/berlin.svg">
+    <img class="dubai" src="img/berlin.svg" />
+  </object>
