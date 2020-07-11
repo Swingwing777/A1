@@ -22,39 +22,3 @@
   </a>
 </body>
 </html>
-
-
-@media all and (min-width: 500px) and (max-width: 750px) {
-  /* only add details that need changing from original grid definitiion */
-  .grid {
-    display: grid;
-    /* this changes grid to two columns and reduces spacing */
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-  }
-
-  .grid__item:last-child {
-    /* this removes grid area on screens 500px to 750px
-    by allowing browser to decide start-end points */
-    grid-column: auto / auto;
-    grid-row: auto / auto;
-  }
-
-  h1 {
-    /* this reduces heading 1 font size */
-    font-size: 22px;
-  }
-
-
-  .dubai {
-    clear: both;
-    /* max-width limits width of profile element */
-    display: flex;
-    /* margin: 0 auto centres the max-width on the screen */
-    justify-content: space-around;
-  }
-
-/* this allowed svg to display, but no animation worked */
-  <object class="dubai" type="image/svg+xml" data="img/berlin.svg">
-    <img class="dubai" src="img/berlin.svg" />
-  </object>
