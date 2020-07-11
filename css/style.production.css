@@ -141,10 +141,10 @@ button {
   width: 120px;
   height: 25px;
   background-color: #0c3c8a;
-  color: white;
+  color: #fff;
   font-size: 7;
   padding: 5px;
-  border-radius: 5%;
+  border-radius: 5px;
   text-shadow: none;
   text-decoration: none;
   -webkit-box-shadow: 2px 2px 5px #455363;
@@ -163,10 +163,10 @@ button {
   width: 120px;
   height: 25px;
   background-color: #0c3c8a;
-  color: white;
+  color: #fff;
   font-size: 7;
   padding: 5px;
-  border-radius: 5%;
+  border-radius: 5px;
   text-shadow: none;
   text-decoration: none;
   -webkit-box-shadow: 2px 2px 5px #455363;
@@ -284,6 +284,86 @@ button:active {
   border:none;
 }
 
+form input {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #545d80;
+  width: 240px;
+  height: 30px;
+}
+
+input {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #545d80;
+  width: 240px;
+  height: 30px;
+}
+
+::-webkit-input-placeholder {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #545d80;
+  width: 240px;
+  height: 30px;
+}
+
+::-moz-placeholder {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #545d80;
+  width: 240px;
+  height: 30px;
+}
+
+:-ms-input-placeholder {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #545d80;
+  width: 240px;
+  height: 30px;
+}
+
+::-ms-input-placeholder {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #545d80;
+  width: 240px;
+  height: 30px;
+}
+
+::placeholder {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #545d80;
+  width: 240px;
+  height: 30px;
+}
+
+textarea {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #545d80;
+  width: 240px;
+  height: 60px;
+}
+
 /*  /////////////continue with class rules/////////////// */
 /* Note BEM naming practice for classes */
 
@@ -371,8 +451,9 @@ button:active {
           justify-content: center;
 }
 
-.contactinfo__detail {
-  display: inline-block;
+.user_label {
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .page-footer {
@@ -399,9 +480,10 @@ button:active {
   Traditional solution: display inline-block plus 33% width */
 
 .grid__item,
-.contactinfo__item,
-.contactinfo__item {
-  /* Grid fallback */
+.mycontactinfo__item,
+.userinfo__item,
+.grid-social-media__item {
+  /* Grid fallback required for the grid__items, not the parent grid */
   display: inline-block;
   width: 33%
 }
@@ -442,7 +524,7 @@ beneath respective Grid Fallback */
   grid-row-end: 4;
 }
 
-.contactinfo {
+.mycontactinfo {
   /* Contact Grid */
   display: -ms-grid;
   display: grid;
@@ -451,13 +533,45 @@ beneath respective Grid Fallback */
   grid-gap: 20px;
 }
 
-.contactinfo__item {
+.mycontactinfo__item {
   background-color: #f7fafc;
   /* width set to auto to overwrite grid fallback width 33% */
   width: auto;
   text-align: center;
   -webkit-box-shadow: 2px 2px 5px #455363;
           box-shadow: 2px 2px 5px #455363;
+}
+
+/* user info layout */
+
+.userinfo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 10px auto;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  margin: 0 auto;
+}
+
+.userinfo__item,
+.userinfo__item2,
+.userinfo__item3  {
+  width: auto;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.userinfo__item2,
+.userinfo__item3 {
+  -ms-grid-column-align: left;
+      justify-self: left;
+}
+
+.userinfo__item3 {
+  margin-left: 120px;
 }
 
 .grid-social-media {
@@ -661,6 +775,24 @@ beneath respective Grid Fallback */
     by allowing browser to decide start-end points */
     grid-column: auto / auto;
     grid-row: auto / auto;
+  }
+
+  .userinfo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    margin: 0 auto;
+  }
+
+  .userinfo__item,
+  .userinfo__item2,
+  .userinfo__item3  {
+    width: auto;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    margin: 0 auto;
   }
 
   h1 {

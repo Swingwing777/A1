@@ -8,6 +8,7 @@ Colors used - See :root */
   --background-dark: #83a2c7;
   --background-light: #d7e1ed;
   --theme-box-shadow: #455363;
+  --button-text: #fff;
   --button-blue: #0c3c8a;
   --button-hover-inset-shadow: #a6c1f5;
   --button-hover-dark-shadow: #364352;
@@ -25,6 +26,8 @@ Colors used - See :root */
   --body-font-size: 16px;
   --body-font-wt: 400;
   --body-font-variant: small-caps;
+  --placeholder-font-size: 14px;
+  --placeholder-text-color: #545d80;
 }
 
 * {
@@ -149,10 +152,10 @@ button,
   width: 120px;
   height: 25px;
   background-color: var(--button-blue);
-  color: white;
+  color: var(--button-text);
   font-size: 7;
   padding: 5px;
-  border-radius: 5%;
+  border-radius: 5px;
   text-shadow: none;
   text-decoration: none;
   box-shadow: 2px 2px 5px var(--theme-box-shadow);
@@ -183,6 +186,27 @@ button:active,
   box-shadow: -1px 0px 2px var(--button-active-box-shadow) inset,
   0px -1px 2px var(--button-active-box-shadow) inset;
   border:none;
+}
+
+form input, input,
+::placeholder {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: var(--placeholder-font-size);
+  font-weight: var(--hdg-font-wt);
+  color: var(--placeholder-text-color);
+  width: 240px;
+  height: 30px;
+}
+
+textarea {
+  border-width: 1px;
+  border-radius: 5px;
+  font-size: var(--placeholder-font-size);
+  font-weight: var(--hdg-font-wt);
+  color: var(--placeholder-text-color);
+  width: 240px;
+  height: 60px;
 }
 
 /*  /////////////continue with class rules/////////////// */
@@ -255,8 +279,9 @@ button:active,
   justify-content: center;
 }
 
-.contactinfo__detail {
-  display: inline-block;
+.user_label {
+  font-size: var(--h3-font-size);
+  font-weight: var(--hdg-font-wt);
 }
 
 .page-footer {
@@ -276,9 +301,10 @@ button:active,
   Traditional solution: display inline-block plus 33% width */
 
 .grid__item,
-.contactinfo__item,
+.mycontactinfo__item,
+.userinfo__item,
 .grid-social-media__item {
-  /* Grid fallback for the grid__items, not the parent grid */
+  /* Grid fallback required for the grid__items, not the parent grid */
   display: inline-block;
   width: 33%
 }
@@ -310,19 +336,45 @@ beneath respective Grid Fallback */
   grid-row-end: 4;
 }
 
-.contactinfo {
+.mycontactinfo {
   /* Contact Grid */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
-.contactinfo__item {
+.mycontactinfo__item {
   background-color: var(--grid-background);
   /* width set to auto to overwrite grid fallback width 33% */
   width: auto;
   text-align: center;
   box-shadow: 2px 2px 5px var(--theme-box-shadow);
+}
+
+/* user info layout */
+
+.userinfo {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  margin: 0 auto;
+}
+
+.userinfo__item,
+.userinfo__item2,
+.userinfo__item3  {
+  width: auto;
+  justify-self: right;
+  align-items: center;
+}
+
+.userinfo__item2,
+.userinfo__item3 {
+  justify-self: left;
+}
+
+.userinfo__item3 {
+  margin-left: 120px;
 }
 
 .grid-social-media {
@@ -453,6 +505,21 @@ beneath respective Grid Fallback */
     by allowing browser to decide start-end points */
     grid-column: auto / auto;
     grid-row: auto / auto;
+  }
+
+  .userinfo {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+    margin: 0 auto;
+  }
+
+  .userinfo__item,
+  .userinfo__item2,
+  .userinfo__item3  {
+    width: auto;
+    justify-self: center;
+    margin: 0 auto;
   }
 
   h1 {

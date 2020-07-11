@@ -50,8 +50,8 @@
   <hr>
 
   <section>
-    <div class="contactinfo">
-      <div class="contactinfo__item">
+    <div class="mycontactinfo">
+      <div class="mycontactinfo__item">
         <h1>Company Address</h1>
         <address>
           David Hales<br>
@@ -61,7 +61,7 @@
           United Arab Emirates<br>
         </address>
       </div>
-      <div class="contactinfo__item">
+      <div class="mycontactinfo__item">
         <h1>Contact Details</h1>
         <address>
           <ul>
@@ -76,27 +76,39 @@
         </div>
       </div>
 
-      <div>
-        <h2>Please leave your contact details</h2>
-        <address class="contactinfo-user">
+      <h2>Please leave your contact details</h2>
+        <address class="user">
+          <div class="userinfo">
+          <div class="userinfo__item">
+          <!-- user email -->
           <form action="#" method="post" id="contact-form">
             <!--placeholders added for prompt text inside each text box -->
             <!-- styling essential -->
-            <!-- individual input ids may prove redundant if label class styles sufficiently well -->
-            <label class="contact_label" for="contact-email">Your Email:
+            <label class="userinfo_label" for="contact-email">Your Email:
               <input type="email" id="contact-email" name="user email" required placeholder="*required">
             </label>
-            <label class="contact_label" for="tel">Your Telephone (UK):
-              <input type="tel" id="tel" name="user telephone" pattern="\+44\[\(]\d{4}[\)]\d{6}" required placeholder="*+44(####)######">
+          </div>
+            <div class="userinfo__item2">
+            <!-- user telephone -->
+            <label class="userinfo_label" for="tel">Your Telephone:
+              <input type="tel" id="tel" name="user telephone" pattern="[\+]" required placeholder="*incl. country code">
             </label>
-            <label class="contact_label" for="msg">Your Message:
-              <textarea maxlength="240" required id="msg">*max 240 characters</textarea>
+          </div>
+            <div class="userinfo__item">
+            <!-- user free text message -->
+            <label class="userinfo_label" for="msg">Your Message:
+              <textarea maxlength="300" required id="msg">*max 300 characters</textarea>
             </label>
-            <button type="submit">Register</button>
+          </div>
+
+        <div class="userinfo__item3">
+            <button class="userinfo__submit" type="submit">Register</button>
             <!-- Alternatively: <input type="submit" value="Send message">
             renders a submit button that is labelled "Send message".
             However, will not adopt <button> styling.  Will need separate styling -->
           </form>
+        </div>
+        </div>
         </address>
       </section>
 
