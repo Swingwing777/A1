@@ -578,8 +578,8 @@ beneath respective Grid Fallback */
   /* Social Media icon grid */
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 30px auto 30px auto;
-  grid-template-columns: auto auto auto;
+  -ms-grid-columns: auto 30px auto;
+  grid-template-columns: auto auto;
   grid-gap: 30px;
   text-align: center;
   -webkit-box-pack: center;

@@ -380,7 +380,7 @@ beneath respective Grid Fallback */
 .grid-social-media {
   /* Social Media icon grid */
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   grid-gap: 30px;
   text-align: center;
   justify-content: center;
