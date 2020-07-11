@@ -381,6 +381,10 @@ textarea {
   text-align: center;
 }
 
+.summary {
+  font-variant: normal;
+}
+
 .page-header {
   /* allows (but does not compel) header to use up to 100% of screen width */
   clear: both;
@@ -740,8 +744,8 @@ beneath respective Grid Fallback */
 }
 
 #rocketman {
-  -webkit-animation: 9s infinite rocketman-move linear;
-          animation: 9s infinite rocketman-move linear;
+  -webkit-animation: 9.5s infinite rocketman-move linear;
+          animation: 9.5s infinite rocketman-move linear;
   /*  Note: B777 starts from outside right edge of viewport, translates across Background
   until outside left edge of viewpoint, and then translates out of sight back to origin,
   which has been adjusted within svg to sit outside viewport */
