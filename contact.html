@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact HOB | Exercise 1.9</title>
   <link rel="shortcut icon" href="img/RAF_favicon-16x16.png">
   <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap">
   <link rel="stylesheet" type="text/css" href="css/style.production.css">
 </head>
@@ -15,9 +15,9 @@
   <!-- header including main logo and navigation bar -->
   <header class="page-header">
     <!-- Header Logo -->
-    <a href="index.html" target="_self" role="menuitem">
-      <img width="200px" height="70px" src="img/HOB_WD.png" id="page-header__logo" class="page-header__item"
-       alt="The uppercase letters H O B make up the logo of Hal O'Brien Web Development">
+    <a href="index.html" target="_self">
+      <img width="200" height="70" src="img/HOB_WD.png" id="page-header__logo" class="page-header__item"
+      alt="The uppercase letters H O B make up the logo of Hal O'Brien Web Development">
     </a>
     <nav class="nav_hdgs page-header__item">
       <!-- Use of <a> rather than <h> or <p> allows all 4
@@ -53,77 +53,61 @@
     <div class="mycontactinfo">
       <div class="mycontactinfo__item">
         <h1>Company Address</h1>
-        <address>
+        <p>
           PO Box XX<br>
           Dubai<br>
           United Arab Emirates<br>
-        </address>
+        </p>
       </div>
       <div class="mycontactinfo__item">
         <h1>Contact Details</h1>
-        <address>
-          <ul>
-            <li>Dial (UK): <a href="tel:+447593647630">+44 7593 647630</a></li>
-            <li>Dial (UAE): <a href="tel:+971508561103">+971 50 8561103</a></li>
-            <li>Skype: <a href="skype:d_a_j.hales">David Hales</a></li>
-            <li>Email: <a href="mailto:haldw@live.co.uk;hales.ann@live.co.uk?cc=nobody@outlook.org&bcc=boris@downingstreet.co.uk&subject=Support%20The%20Airlines">
-              haldw@live.co.uk</a></li>
-              <li><a href="mailto:haldw@live.co.uk?subject=Website%20Enquiry">Contact Me via Email</a></li>
-            </ul>
-          </address>
+        <ul>
+          <li>Dial (UK): <a href="tel:+447593647630">+44 7593 647630</a></li>
+          <li>Dial (UAE): <a href="tel:+971508561103">+971 50 8561103</a></li>
+          <li>Skype: <a href="skype:d_a_j.hales">David Hales</a></li>
+          <li>Email: <a href="mailto:haldw@live.co.uk;hales.ann@live.co.uk?cc=nobody@outlook.org&bcc=boris@downingstreet.co.uk&subject=Support%20The%20Airlines">
+            haldw@live.co.uk</a></li>
+            <li><a href="mailto:haldw@live.co.uk?subject=Website%20Enquiry">Contact Me via Email</a></li>
+          </ul>
         </div>
       </div>
+    </section>
 
-      <h2>Please leave your contact details</h2>
-        <address class="user">
-          <div class="userinfo">
-          <div class="userinfo__item">
+    <section class="userinfo__wrapper">
+      <h2 id="userinfo__heading">Please leave your contact details</h2>
+      <address>
+        <form action="#" method="post" class="userinfo">
           <!-- user email -->
-          <form action="#" method="post" id="contact-form">
-            <!--placeholders added for prompt text inside each text box -->
-            <!-- styling essential -->
-            <label class="userinfo_label" for="contact-email">Your Email:
-              <input type="email" id="contact-email" name="user email" required placeholder="*required">
-            </label>
-          </div>
-            <div class="userinfo__item2">
-            <!-- user telephone -->
-            <label class="userinfo_label" for="tel">Your Telephone:
-              <input type="tel" id="tel" name="user telephone" pattern="[\+]" required placeholder="*incl. country code">
-            </label>
-          </div>
-            <div class="userinfo__item">
-            <!-- user free text message -->
-            <label class="userinfo_label" for="msg">Your Message:
-              <textarea maxlength="300" required id="msg">*max 300 characters</textarea>
-            </label>
-          </div>
+          <label class="userinfo__item" for="user-email">Your Email:
+            <input type="email" id="user-email" name="user email" required placeholder="*required">
+          </label>
+          <!-- user telephone -->
+          <label class="userinfo__item" for="user-tel">Your Telephone:
+            <input type="tel" id="user-tel" name="user telephone" pattern="[\+]" required placeholder="* + country code">
+          </label>
+          <!-- user free text message -->
+          <label class="userinfo__item" for="user-msg">Your Message:
+            <textarea maxlength="300" required id="user-msg">*max 300 characters</textarea>
+          </label>
+          <button id="submit" type="submit">Register</button>
+        </form>
+      </address>
+    </section>
 
-        <div class="userinfo__item3">
-            <button class="userinfo__submit" type="submit">Register</button>
-            <!-- Alternatively: <input type="submit" value="Send message">
-            renders a submit button that is labelled "Send message".
-            However, will not adopt <button> styling.  Will need separate styling -->
-          </form>
-        </div>
-        </div>
-        </address>
-      </section>
+    <hr>
 
-  <hr>
-
-  <footer class="page-footer">
-    <h2>Find Me On</h2>
-    <!-- Social Media Icons sized in svg: height 30px -->
-    <div class="grid-social-media">
-      <a href="https://www.linkedin.com/in/david-hales-3450305a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BjdXUHVlvTQub1gUlJq%2Bytw%3D%3D" target="_blank">
-        <img src="img/Linkedin_sq.svg" alt="LinkedIn" class="grid-social-media__item">
-      </a>
-      <a href="https://wa.me/+971508561103?text=I'm%20interested%20in%20web%20developement%20services" target="_blank">
-        <img src="img/Whatsapp.svg" alt="Whatsapp" class="grid-social-media__item">
-      </a>
-    </div>
-  </footer>
-  <script src="js/tota11y.min.js"></script>
+    <footer class="page-footer">
+      <h2>Find Me On</h2>
+      <!-- Social Media Icons sized in svg: height 30px -->
+      <div class="grid-social-media">
+        <a href="https://www.linkedin.com/in/david-hales-3450305a/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BjdXUHVlvTQub1gUlJq%2Bytw%3D%3D" target="_blank">
+          <img src="img/Linkedin_sq.svg" alt="LinkedIn" class="grid-social-media__item">
+        </a>
+        <a href="https://wa.me/+971508561103?text=I'm%20interested%20in%20web%20developement%20services" target="_blank">
+          <img src="img/Whatsapp.svg" alt="Whatsapp" class="grid-social-media__item">
+        </a>
+      </div>
+    </footer>
+    <script src="js/tota11y.min.js"></script>
   </body>
   </html>

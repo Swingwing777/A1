@@ -142,14 +142,13 @@ a:active {
   color: var(--link-active);
 }
 
-button,
-.button1 {
+button {
   /* this overrides default browser styling and adds bespoke styling */
   border: none;
   /* takes the font from the outer container */
   font-family: inherit;
   /* styles the background color, font color, and text decoration of the button */
-  width: 120px;
+  width: 140px;
   height: 25px;
   background-color: var(--button-blue);
   color: var(--button-text);
@@ -162,9 +161,7 @@ button,
   transition: all 2.0s ease-in-out;
 }
 
-button:hover, button:focus,
-.button1:hover,
-.button1:focus {
+button:hover, button:focus {
   /* cursor changes to hand on hover */
   cursor: pointer;
   opacity: 0.8;
@@ -178,8 +175,7 @@ button:hover, button:focus,
     0px 4px 7px 0px var(--button-hover-dark-shadow);  /* bottom */;
 }
 
-button:active,
-.button1:active {
+button:active {
   /* filter darkens button and reverses shading for push-in effect.
   Alternative is to use opacity, but relies on page background birghtness for effect */
   filter: brightness(0.5);
@@ -353,32 +349,24 @@ beneath respective Grid Fallback */
   width: auto;
   text-align: center;
   box-shadow: 2px 2px 5px var(--theme-box-shadow);
+  vertical-align: middle;
 }
 
 /* user info layout */
 
-.userinfo {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 10px;
+.userinfo__wrapper {
+  /* forces input boxes into alignment by restricting width */
+  max-width: 500px;
+  text-align: left;
   margin: 0 auto;
 }
 
-.userinfo__item,
-.userinfo__item2,
-.userinfo__item3  {
-  width: auto;
-  justify-self: right;
-  align-items: center;
-}
-
-.userinfo__item2,
-.userinfo__item3 {
-  justify-self: left;
-}
-
-.userinfo__item3 {
-  margin-left: 120px;
+.userinfo__item {
+  clear:both;
+  display:flex;
+  flex-direction: column;
+  margin-left: 110px;
+  margin-bottom: 15px;
 }
 
 .grid-social-media {
@@ -426,6 +414,16 @@ beneath respective Grid Fallback */
 #background {
   box-shadow: 4px 4px 5px var(--theme-box-shadow);
 }
+
+#userinfo__heading {
+  text-align: center;
+}
+
+#submit {
+  margin-left: 160px;
+}
+
+
 
 /* //////////////// animations ///////////////////// */
 
@@ -500,6 +498,16 @@ beneath respective Grid Fallback */
 }
 
 @media all and (max-width: 750px) {
+
+  h1 {
+    /* this reduces heading 1 font size */
+    font-size: 22px;
+  }
+
+  body {
+    font-size: 14px;
+  }
+
   .grid {
     grid-gap: 10px;
   }
@@ -511,27 +519,21 @@ beneath respective Grid Fallback */
     grid-row: auto / auto;
   }
 
-  .userinfo {
-    display: grid;
-    grid-template-columns: auto;
-    grid-gap: 10px;
-    margin: 0 auto;
-  }
-
-  .userinfo__item,
-  .userinfo__item2,
-  .userinfo__item3  {
-    width: auto;
-    justify-self: center;
-    margin: 0 auto;
-  }
-
-  h1 {
-    /* this reduces heading 1 font size */
-    font-size: 22px;
-  }
   .dubai {
     flex-basis:400px;
     /* flex allows dubai image to shrink when display area shrunk.*/
+  }
+
+  .userinfo__item {
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  #userinfo__heading {
+    text-align: center;
+  }
+
+  #submit {
+    margin-left: 30px;
   }
 }
