@@ -1,8 +1,3 @@
-/*
-Colors used - See :root */
-
-/* /////////////// start with block rules (and block:state rules) /////////// */
-
 :root {
   --primary-text-color: #545d80;
   --background-dark: #83a2c7;
@@ -36,7 +31,6 @@ Colors used - See :root */
 }
 
 body {
-  /* Background pale blue-blue linear gradient */
   /* Main font: Montserrat sans serif */
   font-family: 'Montserrat', sans-serif;
   font-weight: var(--body-font-wt);
@@ -46,6 +40,7 @@ body {
   color: var(--primary-text-color);
   background: var(--background-light);
 }
+
 /* All headings medium font in reducing size */
 
 h1 {
@@ -71,39 +66,35 @@ div {
 }
 
 header {
-  padding: 10px;
   /* max-width limits width of profile element */
+  padding: 10px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 section {
   padding: 10px;
-  /* max-width limits width of profile element */
   max-width: 1200px;
-  /* margin: 0 auto centres the max-width on the screen */
   margin: 0 auto;
 }
 
 footer {
   padding: 10px;
-  /* max-width limits width of profile element */
   max-width: 1200px;
   margin: 0 auto;
 }
 
 hr {
   margin: 0 auto;
-  border: 0px;
+  border: 0;
   height: 3px;
-  background-image: linear-gradient(to right, var(--horiz-rule-light),var(--horiz-rule-dark),var(--horiz-rule-light));
+  background-image: linear-gradient(to right, var(--horiz-rule-light), var(--horiz-rule-dark), var(--horiz-rule-light));
 }
 
 ul {
   /* removes bullets and places inline with logo */
   list-style-type: none;
-  display:inline-block;
-  spaced: 20px;
+  display: inline-block;
 }
 
 table {
@@ -114,7 +105,8 @@ table {
   border-spacing: 0;
 }
 
-th, td {
+th,
+td {
   /* 'About' Tables - Heading cells */
   border: 0.5px solid var(--primary-text-color);
 }
@@ -131,7 +123,8 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   /* remove underline/change colour
   on hover or focus */
   text-decoration: underline;
@@ -145,9 +138,7 @@ a:active {
 button {
   /* this overrides default browser styling and adds bespoke styling */
   border: none;
-  /* takes the font from the outer container */
   font-family: inherit;
-  /* styles the background color, font color, and text decoration of the button */
   width: 140px;
   height: 25px;
   background-color: var(--button-blue);
@@ -158,33 +149,32 @@ button {
   text-shadow: none;
   text-decoration: none;
   box-shadow: 2px 2px 5px var(--theme-box-shadow);
-  transition: all 2.0s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   /* cursor changes to hand on hover */
   cursor: pointer;
   opacity: 0.8;
-  /* increase button brightness to 120% */
   filter: brightness(1.2);
   box-shadow:
-    /* gives the button a blurred (semi-embossed effect) */
-    4px 0px 2px 0px var(--button-hover-inset-shadow) inset, /* left lighter shade */
-    0px 3px 5px 0px var(--button-hover-inset-shadow) inset, /* top lighter shade*/
-    4px 0px 6px 0px var(--button-hover-dark-shadow), /* right */
-    0px 4px 7px 0px var(--button-hover-dark-shadow);  /* bottom */;
+    4px 0 2px 0 var(--button-hover-inset-shadow) inset, /* left lighter shade */
+    0 3px 5px 0 var(--button-hover-inset-shadow) inset, /* top lighter shade*/
+    4px 0 6px 0 var(--button-hover-dark-shadow), /* right */
+    0 4px 7px 0 var(--button-hover-dark-shadow);  /* bottom */
 }
 
 button:active {
   /* filter darkens button and reverses shading for push-in effect.
   Alternative is to use opacity, but relies on page background birghtness for effect */
   filter: brightness(0.5);
-  box-shadow: -1px 0px 2px var(--button-active-box-shadow) inset,
-  0px -1px 2px var(--button-active-box-shadow) inset;
-  border:none;
+  box-shadow: -1px 0 2px var(--button-active-box-shadow) inset, 0 -1px 2px var(--button-active-box-shadow) inset;
+  border: none;
 }
 
-form input, input,
+form input,
+input,
 ::placeholder {
   border-width: 1px;
   border-radius: 5px;
@@ -205,8 +195,7 @@ textarea {
   height: 60px;
 }
 
-/*  /////////////continue with class rules/////////////// */
-/* Note BEM naming practice for classes */
+/* /////////////continue with class rules/////////////// */
 
 .experience,
 .qualification {
@@ -230,7 +219,7 @@ textarea {
 }
 
 .page-header__item {
-  /*-- All header items: Grow No, Shrink Yes, Base Width 200px */
+  /* All header items: Grow No, Shrink Yes, Base Width 200px */
   flex: 0 1 200px;
 }
 
@@ -243,27 +232,26 @@ textarea {
 }
 
 .nav_hdgs {
-/* need to removed default hyperlink styling, to provide contrast */
+  /* need to removed default hyperlink styling, to provide contrast */
   font-size: 14px;
   font-variant: small-caps;
   line-height: 1.6;
-  font-color: var(--primary-text-color);
+  color: var(--primary-text-color);
   display: inline-block;
   margin: auto;
 }
 
 .navigation-list {
   /* this places navigation inline with logo
-   - ie block element above in html file*/
+   - ie block element above in html file */
   display: inline-block;
   list-style-type: none;
 }
 
 .navigation-list li {
   /* To target nested list without an assigned class within parent's class */
-  /* List arranged and spaced as row instead of default column */
   display: inline-block;
-  align-content:center;
+  align-content: center;
   margin-left: 20px;
 }
 
@@ -271,11 +259,12 @@ textarea {
   /* this clears (amnogst other properties) max-width, as incompatible with display-flex.
   So need to limit max width within .svg instead.  Trying to re-add max-width here will stop flex */
   clear: both;
-  /* max-width limits width of profile element */
   display: flex;
-  flex-basis:1200px;
+  flex-basis: 1200px;
+
   /* width of image needs to be limted to 1200px within svg */
-  /* flex allows dubai image to shrink when display area shrunk.*/
+
+  /* flex allows dubai image to shrink when display area shrunk. */
   justify-content: center;
 }
 
@@ -287,9 +276,11 @@ textarea {
 .page-footer {
   /* this clears any floating rules in footer */
   clear: both;
+
   /* this applies flexbox to footer (later grid built within)*/
   display: flex;
   text-align: center;
+
   /* Heading & Social Media icons are separate blocks */
   flex-direction: column;
   flex-grow: 1;
@@ -306,7 +297,7 @@ textarea {
 .grid-social-media__item {
   /* Grid fallback required for the grid__items, not the parent grid */
   display: inline-block;
-  width: 33%
+  width: 33%;
 }
 
 /*  CSS grids must be written
@@ -315,7 +306,7 @@ beneath respective Grid Fallback */
 .grid {
   /* Work Grid */
   display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   text-align: center;
   justify-content: center;
@@ -323,6 +314,7 @@ beneath respective Grid Fallback */
 
 .grid__item {
   background-color: var(--grid-background);
+
   /* width set to auto to overwrite grid fallback width 33% */
   width: auto;
   box-shadow: 2px 2px 5px var(--theme-box-shadow);
@@ -345,6 +337,7 @@ beneath respective Grid Fallback */
 
 .mycontactinfo__item {
   background-color: var(--grid-background);
+
   /* width set to auto to overwrite grid fallback width 33% */
   width: auto;
   text-align: center;
@@ -362,8 +355,8 @@ beneath respective Grid Fallback */
 }
 
 .userinfo__item {
-  clear:both;
-  display:flex;
+  clear: both;
+  display: flex;
   flex-direction: column;
   margin-left: 110px;
   margin-bottom: 15px;
@@ -390,13 +383,14 @@ beneath respective Grid Fallback */
 #page-header__logo {
   /* this adds a blurred shadow to my plain logo background */
   box-shadow: 4px 4px 5px var(--theme-box-shadow);
-  position:relative;
+  position: relative;
   top: 20px;
   left: 20px;
-  transition-property: all 2.0 ease-in-out;
+  transition-property: all 2s ease-in-out;
 }
 
-#page-header__logo:hover, #page-header__logo:focus {
+#page-header__logo:hover,
+#page-header__logo:focus {
   box-shadow: 5px 5px 8px var(--button-hover-dark-shadow);
 }
 
@@ -404,7 +398,7 @@ beneath respective Grid Fallback */
   /* this floats image and creates soft shadow */
   float: left;
   margin-left: 20%;
-  margin-right: 80px;
+  margin-right: 5%;
   width: 250px;
   height: auto;
   border-radius: 50%;
@@ -424,58 +418,71 @@ beneath respective Grid Fallback */
 }
 
 
-
 /* //////////////// animations ///////////////////// */
 
 /* animation for dubai_sunset_X1/X2.svg */
 
 @keyframes rocketman-move {
   0% {
-      transform: translate(0px, 0px);
-      /* start point to right - not visible */
-    }
-  98% {
-      transform: translate(-5000px, 40px);
-      /* right to left, slighty descending - to out of sight left */
-    }
-  99% {
-      transform: translate(-6000px, -500px);
-      /* vertically up page - out of sight */
-    }
-  100% {
-    /*  right to left out of sight, then down to start point */
-    transform: translate(0px, -500px);
-    }
+    transform: translate(0, 0);
+
+    /* start point to right - not visible */
   }
 
-@keyframes B777-move {
-0% {
-    transform: translate(0px, 0px);
-    /* start point to right (origin defined as X=2500 in .svg) - not visible */
-  }
-98% {
-    transform: translate(-3000px, 40px);
+  98% {
+    transform: translate(-5000px, 40px);
+
     /* right to left, slighty descending - to out of sight left */
   }
-99% {
-    transform: translate(-3000px, -500px);
+
+  99% {
+    transform: translate(-6000px, -500px);
+
     /* vertically up page - out of sight */
   }
-100% {
-  /*  right to left out of sight, then down to start point */
-  transform: translate(0px, -500px);
+
+  100% {
+    /* right to left out of sight, then down to start point */
+    transform: translate(0, -500px);
+  }
+}
+
+@keyframes B777-move {
+  0% {
+    transform: translate(0, 0);
+
+    /* start point to right (origin defined as X=2500 in .svg) - not visible */
+  }
+
+  98% {
+    transform: translate(-3000px, 40px);
+
+    /* right to left, slighty descending - to out of sight left */
+  }
+
+  99% {
+    transform: translate(-3000px, -500px);
+
+    /* vertically up page - out of sight */
+  }
+
+  100% {
+    /* right to left out of sight, then down to start point */
+    transform: translate(0, -500px);
   }
 }
 
 #B777 {
   animation: 10s infinite B777-move linear;
-  /*  Note: B777 starts from outside right edge of viewport, translates across Background
+
+  /* Note: B777 starts from outside right edge of viewport, translates across Background
   until outside left edge of viewpoint, and then translates out of sight back to origin,
   which has been adjusted within svg to sit outside viewport */
 }
 
 #rocketman {
   animation: 9.5s infinite rocketman-move linear;
+
   /*  Note: B777 starts from outside right edge of viewport, translates across Background
   until outside left edge of viewpoint, and then translates out of sight back to origin,
   which has been adjusted within svg to sit outside viewport */
@@ -490,6 +497,7 @@ beneath respective Grid Fallback */
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (min-width: 500px) and (max-width: 750px) {
   /* only add details that need changing from original grid definition */
   .grid {
@@ -498,7 +506,6 @@ beneath respective Grid Fallback */
 }
 
 @media all and (max-width: 750px) {
-
   h1 {
     /* this reduces heading 1 font size */
     font-size: 22px;
@@ -520,8 +527,9 @@ beneath respective Grid Fallback */
   }
 
   .dubai {
-    flex-basis:400px;
-    /* flex allows dubai image to shrink when display area shrunk.*/
+    flex-basis: 400px;
+
+    /* flex allows dubai image to shrink when display area shrunk. */
   }
 
   .userinfo__item {
