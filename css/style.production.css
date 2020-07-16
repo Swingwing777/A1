@@ -564,8 +564,8 @@ beneath respective Grid Fallback */
   }
 
   99% {
-    -webkit-transform: translate(-6000px, -500px);
-            transform: translate(-6000px, -500px);
+    -webkit-transform: translate(-10000px, -500px);
+            transform: translate(-10000px, -500px);
 
     /* vertically up page - out of sight */
   }
@@ -593,8 +593,8 @@ beneath respective Grid Fallback */
   }
 
   99% {
-    -webkit-transform: translate(-6000px, -500px);
-            transform: translate(-6000px, -500px);
+    -webkit-transform: translate(-10000px, -500px);
+            transform: translate(-10000px, -500px);
 
     /* vertically up page - out of sight */
   }

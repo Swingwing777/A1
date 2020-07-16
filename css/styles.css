@@ -438,7 +438,7 @@ beneath respective Grid Fallback */
   }
 
   99% {
-    transform: translate(-6000px, -500px);
+    transform: translate(-10000px, -500px);
 
     /* vertically up page - out of sight */
   }
@@ -463,7 +463,7 @@ beneath respective Grid Fallback */
   }
 
   99% {
-    transform: translate(-3000px, -500px);
+    transform: translate(-10000px, -500px);
 
     /* vertically up page - out of sight */
   }
