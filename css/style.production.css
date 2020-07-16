@@ -403,9 +403,7 @@ beneath respective Grid Fallback */
 
 .grid {
   /* Work Grid */
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   text-align: center;
@@ -435,9 +433,7 @@ beneath respective Grid Fallback */
 
 .mycontactinfo {
   /* Contact Grid */
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
@@ -477,9 +473,7 @@ beneath respective Grid Fallback */
 
 .grid-social-media {
   /* Social Media icon grid */
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 30px auto;
   grid-template-columns: auto auto;
   grid-gap: 30px;
   text-align: center;
