@@ -556,24 +556,11 @@ beneath respective Grid Fallback */
     /* start point to right - not visible */
   }
 
-  98% {
+  100% {
     -webkit-transform: translate(-5000px, 40px);
             transform: translate(-5000px, 40px);
 
     /* right to left, slighty descending - to out of sight left */
-  }
-
-  99% {
-    -webkit-transform: translate(-10000px, -500px);
-            transform: translate(-10000px, -500px);
-
-    /* vertically up page - out of sight */
-  }
-
-  100% {
-    /* right to left out of sight, then down to start point */
-    -webkit-transform: translate(0, -500px);
-            transform: translate(0, -500px);
   }
 }
 
@@ -585,24 +572,11 @@ beneath respective Grid Fallback */
     /* start point to right - not visible */
   }
 
-  98% {
+  100% {
     -webkit-transform: translate(-5000px, 40px);
             transform: translate(-5000px, 40px);
 
     /* right to left, slighty descending - to out of sight left */
-  }
-
-  99% {
-    -webkit-transform: translate(-10000px, -500px);
-            transform: translate(-10000px, -500px);
-
-    /* vertically up page - out of sight */
-  }
-
-  100% {
-    /* right to left out of sight, then down to start point */
-    -webkit-transform: translate(0, -500px);
-            transform: translate(0, -500px);
   }
 }
 
@@ -614,24 +588,11 @@ beneath respective Grid Fallback */
     /* start point to right (origin defined as X=2500 in .svg) - not visible */
   }
 
-  98% {
+  100% {
     -webkit-transform: translate(-3000px, 40px);
             transform: translate(-3000px, 40px);
 
     /* right to left, slighty descending - to out of sight left */
-  }
-
-  99% {
-    -webkit-transform: translate(-3000px, -500px);
-            transform: translate(-3000px, -500px);
-
-    /* vertically up page - out of sight */
-  }
-
-  100% {
-    /* right to left out of sight, then down to start point */
-    -webkit-transform: translate(0, -500px);
-            transform: translate(0, -500px);
   }
 }
 
@@ -643,24 +604,11 @@ beneath respective Grid Fallback */
     /* start point to right (origin defined as X=2500 in .svg) - not visible */
   }
 
-  98% {
+100% {
     -webkit-transform: translate(-3000px, 40px);
             transform: translate(-3000px, 40px);
 
     /* right to left, slighty descending - to out of sight left */
-  }
-
-  99% {
-    -webkit-transform: translate(-3000px, -500px);
-            transform: translate(-3000px, -500px);
-
-    /* vertically up page - out of sight */
-  }
-
-  100% {
-    /* right to left out of sight, then down to start point */
-    -webkit-transform: translate(0, -500px);
-            transform: translate(0, -500px);
   }
 }
 
@@ -674,8 +622,8 @@ beneath respective Grid Fallback */
 }
 
 #rocketman {
-  -webkit-animation: 9.5s infinite rocketman-move linear;
-          animation: 9.5s infinite rocketman-move linear;
+  -webkit-animation: 10s infinite rocketman-move linear;
+          animation: 10s infinite rocketman-move linear;
 
   /*  Note: B777 starts from outside right edge of viewport, translates across Background
   until outside left edge of viewpoint, and then translates out of sight back to origin,

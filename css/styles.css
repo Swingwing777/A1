@@ -431,21 +431,10 @@ beneath respective Grid Fallback */
     /* start point to right - not visible */
   }
 
-  98% {
+  100% {
     transform: translate(-5000px, 40px);
 
     /* right to left, slighty descending - to out of sight left */
-  }
-
-  99% {
-    transform: translate(-10000px, -500px);
-
-    /* vertically up page - out of sight */
-  }
-
-  100% {
-    /* right to left out of sight, then down to start point */
-    transform: translate(0, -500px);
   }
 }
 
@@ -456,21 +445,10 @@ beneath respective Grid Fallback */
     /* start point to right (origin defined as X=2500 in .svg) - not visible */
   }
 
-  98% {
+  100% {
     transform: translate(-3000px, 40px);
 
     /* right to left, slighty descending - to out of sight left */
-  }
-
-  99% {
-    transform: translate(-10000px, -500px);
-
-    /* vertically up page - out of sight */
-  }
-
-  100% {
-    /* right to left out of sight, then down to start point */
-    transform: translate(0, -500px);
   }
 }
 
