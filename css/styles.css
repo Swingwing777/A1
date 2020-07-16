@@ -413,6 +413,10 @@ beneath respective Grid Fallback */
   text-align: center;
 }
 
+#myemail {
+  font-variant: normal;
+}
+
 #submit {
   margin-left: 160px;
 }
