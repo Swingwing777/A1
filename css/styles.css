@@ -321,10 +321,8 @@ beneath respective Grid Fallback */
 
 .grid__item:last-child {
   /* This gives greater prominance to latest project by creating grid area */
-  grid-column-start: 2;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 4;
+  grid-column: 2 4;
+  grid-row: 2 4;
 }
 
 .mycontactinfo {
