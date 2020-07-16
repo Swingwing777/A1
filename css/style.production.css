@@ -120,7 +120,6 @@ button {
   height: 25px;
   background-color: #0c3c8a;
   color: #fff;
-  font-size: 7px;
   padding: 5px;
   border-radius: 5px;
   text-shadow: none;
@@ -392,6 +391,7 @@ beneath respective Grid Fallback */
   position: relative;
   top: 20px;
   left: 20px;
+  margin-bottom: 20px;
   transition: all 2s ease-in-out;
 }
 
