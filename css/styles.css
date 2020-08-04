@@ -291,8 +291,8 @@ textarea {
   Traditional solution: display inline-block plus 33% width */
 
 .grid__item,
-.mycontactinfo__item,
-.userinfo__item,
+.myContactInfo__Item,
+.userInfo__Item,
 .grid-social-media__item {
   /* Grid fallback required for the grid__items, not the parent grid */
   display: inline-block;
@@ -325,14 +325,14 @@ beneath respective Grid Fallback */
   grid-row: 2 / 4;
 }
 
-.mycontactinfo {
+.myContactInfo {
   /* Contact Grid */
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
-.mycontactinfo__item {
+.myContactInfo__Item {
   background-color: var(--grid-background);
 
   /* width set to auto to overwrite grid fallback width 33% */
@@ -344,14 +344,14 @@ beneath respective Grid Fallback */
 
 /* user info layout */
 
-.userinfo__wrapper {
+.userInfo__Wrapper {
   /* forces input boxes into alignment by restricting width */
   max-width: 500px;
   text-align: left;
   margin: 0 auto;
 }
 
-.userinfo__item {
+.userInfo__Item {
   clear: both;
   display: flex;
   flex-direction: column;
@@ -407,11 +407,11 @@ beneath respective Grid Fallback */
   box-shadow: 4px 4px 5px var(--theme-box-shadow);
 }
 
-#userinfo__heading {
+#userInfo__Heading {
   text-align: center;
 }
 
-#myemail {
+#myEmail {
   font-variant: normal;
 }
 
@@ -512,12 +512,12 @@ beneath respective Grid Fallback */
     /* flex allows dubai image to shrink when display area shrunk. */
   }
 
-  .userinfo__item {
+  .userInfo__Item {
     margin-left: 30px;
     margin-bottom: 10px;
   }
 
-  #userinfo__heading {
+  #userInfo__Heading {
     text-align: center;
   }
 

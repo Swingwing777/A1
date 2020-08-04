@@ -390,8 +390,8 @@ textarea {
   Traditional solution: display inline-block plus 33% width */
 
 .grid__item,
-.mycontactinfo__item,
-.userinfo__item,
+.myContactInfo__Item,
+.userInfo__Item,
 .grid-social-media__item {
   /* Grid fallback required for the grid__items, not the parent grid */
   display: inline-block;
@@ -403,7 +403,9 @@ beneath respective Grid Fallback */
 
 .grid {
   /* Work Grid */
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   text-align: center;
@@ -431,14 +433,16 @@ beneath respective Grid Fallback */
   grid-row: 2 / 4;
 }
 
-.mycontactinfo {
+.myContactInfo {
   /* Contact Grid */
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
 
-.mycontactinfo__item {
+.myContactInfo__Item {
   background-color: #f7fafc;
 
   /* width set to auto to overwrite grid fallback width 33% */
@@ -451,14 +455,14 @@ beneath respective Grid Fallback */
 
 /* user info layout */
 
-.userinfo__wrapper {
+.userInfo__Wrapper {
   /* forces input boxes into alignment by restricting width */
   max-width: 500px;
   text-align: left;
   margin: 0 auto;
 }
 
-.userinfo__item {
+.userInfo__Item {
   clear: both;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -473,7 +477,9 @@ beneath respective Grid Fallback */
 
 .grid-social-media {
   /* Social Media icon grid */
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 30px auto;
   grid-template-columns: auto auto;
   grid-gap: 30px;
   text-align: center;
@@ -531,11 +537,11 @@ beneath respective Grid Fallback */
           box-shadow: 4px 4px 5px #455363;
 }
 
-#userinfo__heading {
+#userInfo__Heading {
   text-align: center;
 }
 
-#myemail {
+#myEmail {
   font-variant: normal;
 }
 
@@ -604,7 +610,7 @@ beneath respective Grid Fallback */
     /* start point to right (origin defined as X=2500 in .svg) - not visible */
   }
 
-100% {
+  100% {
     -webkit-transform: translate(-3000px, 40px);
             transform: translate(-3000px, 40px);
 
@@ -622,8 +628,8 @@ beneath respective Grid Fallback */
 }
 
 #rocketman {
-  -webkit-animation: 10s infinite rocketman-move linear;
-          animation: 10s infinite rocketman-move linear;
+  -webkit-animation: 9.5s infinite rocketman-move linear;
+          animation: 9.5s infinite rocketman-move linear;
 
   /*  Note: B777 starts from outside right edge of viewport, translates across Background
   until outside left edge of viewpoint, and then translates out of sight back to origin,
@@ -677,12 +683,12 @@ beneath respective Grid Fallback */
     /* flex allows dubai image to shrink when display area shrunk. */
   }
 
-  .userinfo__item {
+  .userInfo__Item {
     margin-left: 30px;
     margin-bottom: 10px;
   }
 
-  #userinfo__heading {
+  #userInfo__Heading {
     text-align: center;
   }
 

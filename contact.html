@@ -50,8 +50,8 @@
   <hr>
 
   <section>
-    <div class="mycontactinfo">
-      <div class="mycontactinfo__item">
+    <div class="myContactInfo">
+      <div class="myContactInfo__Item">
         <h1>Company Address</h1>
         <p>
           Sweepback Web Development<br>
@@ -59,13 +59,13 @@
           United Arab Emirates<br>
         </p>
       </div>
-      <div class="mycontactinfo__item">
+      <div class="myContactInfo__Item">
         <h1>Contact Details</h1>
         <ul>
           <li>Dial (UK): <a href="tel:+447593647630">+44 7593 647630</a></li>
           <li>Dial (UAE): <a href="tel:+971508561103">+971 50 8561103</a></li>
           <li>Skype: <a href="skype:d_a_j.hales">David</a></li>
-          <li id="myemail">Email: <a href="mailto:info@sweepback.co.uk&subject=Website%20Enquiry">
+          <li id="myEmail">Email: <a href="mailto:info@sweepback.co.uk&subject=Website%20Enquiry">
             info@sweepback.co.uk</a></li>
             <li><a href="mailto:info@sweepback.co.uk?subject=Website%20Enquiry">Contact Me via Email</a></li>
           </ul>
@@ -73,20 +73,20 @@
       </div>
     </section>
 
-    <section class="userinfo__wrapper">
-      <h2 id="userinfo__heading">Please leave your contact details</h2>
+    <section class="userInfo__Wrapper">
+      <h2 id="userInfo__Heading">Please leave your contact details</h2>
       <address>
-        <form action="#" method="post" class="userinfo">
+        <form action="#" method="post" class="userInfo">
           <!-- user email -->
-          <label class="userinfo__item" for="user-email">Your Email:
+          <label class="userInfo__Item" for="user-email">Your Email:
             <input type="email" id="user-email" name="user email" required placeholder="*required">
           </label>
           <!-- user telephone -->
-          <label class="userinfo__item" for="user-tel">Your Telephone:
-            <input type="tel" id="user-tel" name="user telephone" required placeholder="* + country code">
+          <label class="userInfo__Item" for="user-tel">Your Telephone:
+            <input type="tel" id="user-tel" name="user telephone" required placeholder="Include '+' with country code">
           </label>
           <!-- user free text message -->
-          <label class="userinfo__item" for="user-msg">Your Message:
+          <label class="userInfo__Item" for="user-msg">Your Message:
             <textarea maxlength="300" required id="user-msg">*max 300 characters</textarea>
           </label>
           <button id="submit" type="submit">Register</button>
@@ -108,6 +108,9 @@
         </a>
       </div>
     </footer>
+    <script src="js/promise-polyfill.js"></script>
+    <script src="js/fetch.js"></script>
+    <script src="js/scripts.js"></script>
     <script src="js/tota11y.min.js"></script>
   </body>
   </html>
