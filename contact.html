@@ -76,20 +76,28 @@
     <section class="userInfo__Wrapper">
       <h2 id="userInfo__Heading">Please leave your contact details</h2>
       <address>
-        <form action="#" method="post" class="userInfo">
+        <form id="register-form" method="post" class="userInfo">  <!-- action="#" removed -->
+
           <!-- user email -->
-          <label class="userInfo__Item" for="user-email">Your Email:
-            <input type="email" id="user-email" name="user email" required placeholder="*required">
-          </label>
+          <div class="userInfo__Item">
+            <label for="userEmail">Your Email:</label>
+            <input id="userEmail" type="email" name="userEmail" placeholder="*required">  <!-- type="email" required placeholder="*required" -->
+          </div>
+
           <!-- user telephone -->
-          <label class="userInfo__Item" for="user-tel">Your Telephone:
-            <input type="tel" id="user-tel" name="user telephone" required placeholder="Include '+' with country code">
-          </label>
+          <div class="userInfo__Item">
+            <label for="userPhone">Your Telephone:</label>
+            <input id="userPhone" type="tel" name="userPhone" placeholder="Include '+' with country code"> <!-- type="tel" required placeholder="Include '+' with country code" -->
+          </div>
+
           <!-- user free text message -->
-          <label class="userInfo__Item" for="user-msg">Your Message:
-            <textarea maxlength="300" required id="user-msg">*max 300 characters</textarea>
-          </label>
+          <div class="userInfo__Item">
+            <label for="userMsg">Your Message:</label>
+            <textarea maxlength="300" name="userMsg" required id="userMsg">*max 300 characters</textarea>
+          </div>
+
           <button id="submit" type="submit">Register</button>
+
         </form>
       </address>
     </section>
@@ -108,8 +116,6 @@
         </a>
       </div>
     </footer>
-    <script src="js/promise-polyfill.js"></script>
-    <script src="js/fetch.js"></script>
     <script src="js/scripts.js"></script>
     <script src="js/tota11y.min.js"></script>
   </body>

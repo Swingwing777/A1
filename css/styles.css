@@ -285,6 +285,10 @@ textarea {
   flex-grow: 1;
 }
 
+.error-message {
+  color: red;
+}
+
 /* //////////////// Grid Details Here ////////////////// */
 
 /* Grid fallback must go first to allow for cascade effect

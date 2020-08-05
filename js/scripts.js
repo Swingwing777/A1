@@ -1,83 +1,73 @@
-var emailInput = document.querySelector('#user-email');
-var phoneInput = document.querySelector('#user-tel');
+(function() {
+  var form = document.querySelector('#register-form');
+  var emailInput = document.querySelector('#userEmail');
+  var phoneInput = document.querySelector('#userPhone');
 
+  function showErrorMessage(input, message) {
+    var container = input.parentElement; // The .input-wrapper
 
-// ------------------ Validate email details -------------------
-
-function validateEmail() {
-  var value = emailInput.value;
-
-  if (!value) {
-    showErrorMessage(emailInput, 'Email is a required field');
-    return false;
-  }
-
-  if (value.indexOf('@') === -1) {
-    showErrorMessage(emailInput, 'A valid email is required');
-    return false;
-  }
-
-  showErrorMessage(emailInput, null);
-  return true;
-}
-
-// ---------------- Validate phone number ----------------------
-
-function validatePhone() {
-  var number = phoneInput.value ;
-  var hasPlusSign = number.indexOf('+') > -1;
-  var hasNoLetters = number.indexOf('[a-zA-Z]') < 0;
-  return number && hasPlusSign && hasNoLetters;
-
-  if (value.indexOf('+') === -1) {
-    showErrorMessage(phoneInput, "Please include '+' followed by international code");
-    return false;
-  }
-
-  if (value.indexOf('[a-zA-Z]') > -1) {
-    showErrorMessage(phoneInput, "Please '+' then numbers only");
-    return false;
-  }
-
-  showErrorMessage(phoneInput, null);
-  return true;
-}
-
-// ------------- Error message -----------------------
-
-function showErrorMessage(input, message)  {
-  var container = input.parentElement;
-
-  // To remove an existing error Message
-  var error = container.querySelector('error-message');
+    // To remove an existing error message
+    var error = container.querySelector('.error-message');
     if (error) {
-      container.removeChild(error)
+      container.removeChild(error);
     }
 
-  // To remove an existing error Message
+    // Now add the error, if the message is not empty
     if (message) {
       var error = document.createElement('div');
       error.classList.add('error-message');
+      error.innerText = message;
       container.appendChild(error);
     }
-}
+  }
 
-//--------------Validate entire form -----------------
+  function validateEmail() {
+    var value = emailInput.value;
 
-var form = document.querySelector('.userInfo');  // find form ID on DOM
+    if (!value) {
+      showErrorMessage(emailInput, 'E-mail is a required field.');
+      return false;
+    }
 
-function validateForm() {
-  var isValidEmail = validateEmail();
-  var isValidPhone = validatePhone();
-  return isValidEmail && isValidPhone;        // Return both validation results
-}
+    if (value.indexOf('@') === -1) {
+      showErrorMessage(emailInput, 'Please enter a valid e-mail address.');
+      return false;
+    }
 
-form.addEventListener('submit', (e) => {
+    showErrorMessage(emailInput, null);
+    return true;
+  }
+
+  function validatePhone() {
+    var value = phoneInput.value;
+
+    if (!value) {
+      showErrorMessage(phoneInput, 'Please enter telephone number');
+      return false;
+    }
+
+    if (value.indexOf('+') === -1) {
+      showErrorMessage(phoneInput, 'Please enter international code with +');
+      return false;
+    }
+
+    showErrorMessage(phoneInput, null);
+    return true;
+  }
+
+  function validateForm() {
+    var isValidEmail = validateEmail();
+    var isValidPhone = validatePhone();
+    return isValidEmail && isValidPhone;
+  }
+
+  form.addEventListener('submit', (e) => {
     e.preventDefault(); // Do not submit to the server
-    if (validateForm()) {  // is truthy
+    if (validateForm()) {
       alert('Success!');
     }
-  })
+  });
 
-emailInput.addEventListener('input', validateEmail);
-phoneInput.addEventListener('input', validatePhone);
+  emailInput.addEventListener('input', validateEmail);
+  phoneInput.addEventListener('input', validatePhone);
+})();

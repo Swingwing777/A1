@@ -384,6 +384,11 @@ textarea {
           flex-grow: 1;
 }
 
+.error-message {
+  color: red;
+  font-weight: bold;
+  width: 300px;
+}
 /* //////////////// Grid Details Here ////////////////// */
 
 /* Grid fallback must go first to allow for cascade effect
