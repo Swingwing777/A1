@@ -276,7 +276,7 @@ textarea {
   /* this clears any floating rules in footer */
   clear: both;
 
-  /* this applies flexbox to footer (later grid built within)*/
+  /* this applies flexbox to footer (later grid built within) */
   display: flex;
   text-align: center;
 
@@ -287,6 +287,43 @@ textarea {
 
 .error-message {
   color: red;
+}
+
+.screenShot {
+  max-width: 400px;
+  width: auto;
+  border-radius: 5%;
+  box-shadow: 5px 5px 5px 2px rgba(50, 89, 160, 0.6);
+  transition: all ease-in-out 1s;
+}
+
+.projectWrapper {
+  justify-self: center;
+  position: relative;
+  object-fit: contain;
+}
+
+.projectWrapper > h2 {
+  visibility: hidden;
+  position: absolute;
+  margin-top: 20%;
+  margin-left: 120px;
+  color: white;
+  font-size: 30px;
+  text-shadow: 2px 2px 2px #fff;
+  z-index: 500;
+  transition: all ease-in-out 1s;
+}
+
+.projectWrapper:hover > h2,
+.projectWrapper:focus > h2 {
+  visibility: visible;
+  filter: brightness(1);
+}
+
+.screenShot:hover,
+.screenShot:focus {
+  filter: brightness(0.5);
 }
 
 /* //////////////// Grid Details Here ////////////////// */
@@ -423,7 +460,6 @@ beneath respective Grid Fallback */
   margin-left: 160px;
 }
 
-
 /* //////////////// animations ///////////////////// */
 
 /* animation for dubai_sunset_X1/X2.svg */
@@ -479,6 +515,10 @@ beneath respective Grid Fallback */
   .grid {
     /* this changes grid to single column and reduces spacing */
     grid-template-columns: 1fr;
+  }
+  .screenShot {
+    max-width: 200px;
+    width: auto;
   }
 }
 
