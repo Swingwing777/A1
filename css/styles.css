@@ -360,11 +360,11 @@ beneath respective Grid Fallback */
   box-shadow: 2px 2px 5px var(--theme-box-shadow);
 }
 
-.grid__item:last-child {
-  /* This gives greater prominance to latest project by creating grid area */
+/* This gives greater prominance to latest project by creating grid area */
+/* .grid__item:last-child {
   grid-column: 2 / 4;
   grid-row: 2 / 4;
-}
+} */
 
 .myContactInfo {
   /* Contact Grid */
@@ -403,7 +403,7 @@ beneath respective Grid Fallback */
 .grid-social-media {
   /* Social Media icon grid */
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   grid-gap: 30px;
   text-align: center;
   justify-content: center;
