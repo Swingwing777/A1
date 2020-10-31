@@ -361,6 +361,7 @@ beneath respective Grid Fallback */
   text-align: center;
   justify-content: center;
 }
+
 .gridbond {
   /* Bond Grid */
   display: grid;
@@ -539,12 +540,22 @@ beneath respective Grid Fallback */
     max-width: 200px;
     width: auto;
   }
+  #page-header__logo {
+    /* All header items: Grow No, Shrink Yes, Base Width 200px */
+    width: 100px;
+    height: auto;
+  }
 }
 
-@media all and (min-width: 500px) and (max-width: 750px) {
+@media all and (min-width: 500px) and (max-width: 1050px) {
   /* only add details that need changing from original grid definition */
-  .grid {
+  .grid,
+  .gridbond {
     grid-template-columns: 1fr 1fr;
+  }
+  .screenShot {
+    max-width: 200px;
+    width: auto;
   }
 }
 

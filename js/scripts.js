@@ -1,4 +1,4 @@
-(function() {
+(function () {
   var form = document.querySelector('#register-form');
   var emailInput = document.querySelector('#userEmail');
   var phoneInput = document.querySelector('#userPhone');
