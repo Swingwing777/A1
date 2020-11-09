@@ -323,7 +323,7 @@ textarea {
   filter: brightness(1);
 }
 
-.construction,
+.constructList,
 .projectDescription{
   text-align: left;
   line-height:2.0;
@@ -331,9 +331,9 @@ textarea {
   padding: 5px; 
 }
 
-.construction {
+.constructList {
   list-style-type: square;
-  
+  margin-left:10px;
 }
 
 .constructHeading {
