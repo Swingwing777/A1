@@ -334,7 +334,22 @@ textarea {
   text-align: left;
   line-height:2.0;
   font-variant: normal;
-  padding: 5px;
+  padding: 5px; 
+}
+
+.construction {
+  list-style-type: square;
+  
+}
+
+.constructHeading {
+  margin-bottom: 0;
+}
+
+.constructListItem {
+  margin-left: 5%;
+  margin-right: 5%;
+  line-height: 1.6em;
 }
 
 .screenShot:hover,
@@ -360,6 +375,15 @@ textarea {
 beneath respective Grid Fallback */
 
 .grid {
+  /* Work Grid */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.gridPortfolio {
   /* Work Grid */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -541,6 +565,7 @@ beneath respective Grid Fallback */
 @media all and (max-width: 500px) {
   /* only add details that need changing from original grid definition */
   .grid,
+  .grodPortfolio,
   .gridbond {
     /* this changes grid to single column and reduces spacing */
     grid-template-columns: 1fr;
@@ -559,6 +584,7 @@ beneath respective Grid Fallback */
 @media all and (min-width: 500px) and (max-width: 1050px) {
   /* only add details that need changing from original grid definition */
   .grid,
+  .gridPortfolio,
   .gridbond {
     grid-template-columns: 1fr 1fr;
   }
@@ -579,6 +605,7 @@ beneath respective Grid Fallback */
   }
 
   .grid,
+  .gridPortfolio,
   .gridbond {
     grid-gap: 10px;
   }
@@ -609,3 +636,4 @@ beneath respective Grid Fallback */
     margin-left: 30px;
   }
 }
+
