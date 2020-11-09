@@ -377,7 +377,7 @@ beneath respective Grid Fallback */
 .grid {
   /* Work Grid */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto auto;
   grid-gap: 20px;
   text-align: center;
   justify-content: center;
@@ -565,7 +565,7 @@ beneath respective Grid Fallback */
 @media all and (max-width: 500px) {
   /* only add details that need changing from original grid definition */
   .grid,
-  .grodPortfolio,
+  .gridPortfolio,
   .gridbond {
     /* this changes grid to single column and reduces spacing */
     grid-template-columns: 1fr;
@@ -636,4 +636,3 @@ beneath respective Grid Fallback */
     margin-left: 30px;
   }
 }
-

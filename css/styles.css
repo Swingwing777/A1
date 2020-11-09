@@ -371,7 +371,7 @@ beneath respective Grid Fallback */
 .grid {
   /* Work Grid */
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto auto;
   grid-gap: 20px;
   text-align: center;
   justify-content: center;
