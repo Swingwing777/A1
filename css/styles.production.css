@@ -297,7 +297,8 @@ textarea {
   color: red;
 }
 
-.screenShot {
+.screenShot,
+.screenShot_nolink {
   max-width: 400px;
   width: auto;
   border-radius: 1%;
