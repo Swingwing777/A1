@@ -6,12 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sweepback | Our Work</title>
   <link rel="shortcut icon" href="../img/RAF_favicon-16x16.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,500;0,700;1,400&display=swap">
-  <link rel="stylesheet" type="text/css" href="../dist/styles.dist.css">
-  <!--"../css/styles.css"-->
+  <!-- <link rel="stylesheet" type="text/css" href="../dist/styles.dist.css"> -->
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
 </head>
 
 <body>
@@ -55,50 +57,89 @@
       and share images directly from the device camera or picture gallery.</p>
     <p class="projectDescription">Offline function is preserved through the use of local or async storage.
     </p>
-
-    <div class="grid">
-      <!-- Grid-items go here -->
-      <div class="grid__item">
-        <h2>A Chat App for iOS and Android</h2>
-        <img class="screenShot_nolink" src="../img/ChitChat1.png" alt="Screenshots of Chit-Chat App">
-      </div>
-      <div class="grid__item">
-        <h2>Readme</h2>
-        <a href="https://github.com/Swingwing777/Buster-chat/blob/master/Readme.md" target="blank">
-          <img class="screenShot" src="../img/ChitChat_Readme.png" alt="Screenshot of Readme">
+    <h2 class="constructHeading">Construction Tools</h2>
+    <ul class="constructList">
+      <li class="constructListItem">
+        <a href="https://reactnative.dev/" alt="Link to React-Native">React-Native framework</a>
+      </li>
+      <li class="constructListItem">
+        <a href="https://expo.io/" alt="Link to Expo build tools">Expo build tools</a>
+      </li>
+      <li class="constructListItem">
+        <a href="https://github.com/FaridSafi/react-native-gifted-chat" alt="Link to Gifted Chat repository">Gifted Chat
+          library</a>
+      </li>
+      <li class="constructListItem">
+        <a href="https://firebase.google.com/" alt="Link to Google Firebase">Google Firebase Storage and Cloud
+          Firestore</a>
+      </li>
+      <li class="constructListItem">Built and tested for both iOS and Android</li>
+      <li class="constructListItem">
+        <a href="https://trello.com/b/lSsCThKR/native-chat-app" target="_blank" role="menuitem"
+          class="navigation-list__item">Trello project-managed</a>
+      </li>
+    </ul>
+  </section>
+  <section>
+    <div class="carousel_wrapper">
+      <div id="carouselCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+        <ol class="carousel-indicators carousel-ind_shade">
+          <li data-target="#carouselCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselCaptions" data-slide-to="3"></li>
+          <li data-target="#carouselCaptions" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../img/ChitChat.png" class="carousel_emboss d-block w-100" alt="...">
+            <div class="carousel-caption rounded-pill align-bottom d-none d-md-block">
+              <h5 class="caption">A React-Native messaging app for iOS and Android</h5>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../img/ChitChat_GitHub.png" class="carousel_emboss d-block w-100" alt="Github code">
+            <div class="carousel-caption rounded-pill align-middle d-none d-md-block">
+              <a href="https://github.com/Swingwing777/Buster-chat" target="_blank">
+                <h5 class="caption_link">View the code on Github »</h5>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../img/ChitChat_Readme.png" class="carousel_emboss d-block w-100" alt="Readme">
+            <div class="carousel-caption rounded-pill align-middle d-none d-md-block">
+              <a href="https://github.com/Swingwing777/Buster-chat/blob/master/Readme.md#buster-chat" target="_blank">
+                <h5 class="caption_link">Readme »</h5>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../img/ChitChat_UserStories.png" class="carousel_emboss d-block w-100" alt="User Stories">
+            <div class="carousel-caption rounded-pill align-middle d-none d-md-block">
+              <a href="https://github.com/Swingwing777/Buster-chat/blob/master/userStories.md#project-brief-user-stories"
+                target="_blank">
+                <h5 class="caption_link">User Stories »</h5>
+              </a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../img/ChitChatDemo.png" class="carousel_emboss d-block w-100" alt="ChitChat Video Demo">
+            <div class="carousel-caption rounded-pill align-middle d-none d-md-block">
+              <a href="https://github.com/Swingwing777/Buster-chat/blob/master/ChitChatDemonstration2.mp4"
+                target="_blank">
+                <h5 class="caption_link">Video Demo »</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
         </a>
-      </div>
-      <div class="grid__item">
-        <h2>See the code</h2>
-        <a href="https://github.com/Swingwing777/Buster-chat" target="_blank">
-          <img class="screenShot" src="../img/ChitChat_GitHub.png" alt="Screenshot of GitHub page">
+        <a class="carousel-control-next black" href="#carouselCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
         </a>
-      </div>
-      <div class="grid__item">
-        <h2>Download Video Demo from GitHub</h2>
-        <a href="https://github.com/Swingwing777/Buster-chat/blob/master/ChitChatDemonstration2.mp4" target="_blank">
-          <img class="screenShot" src="../img/ChitChatDemo.png" alt="Link to downloadable Chit-Chat Demonstration">
-        </a>
-      </div>
-      <div class="grid__item">
-        <h2>User Stories</h2>
-        <a href="https://github.com/Swingwing777/Buster-chat/blob/master/userStories.md" target="_blank">
-          <img class="screenShot" src="../img/ChitChat_UserStories.png" alt="Link to Chit-Chat User Stories">
-        </a>
-      </div>
-      <div class="grid__item">
-        <h2 class="constructHeading">Construction</h2>
-        <ul class="constructList">
-          <li class="constructListItem">React-Native framework</li>
-          <li class="constructListItem">Expo build tools</li>
-          <li class="constructListItem">Gifted Chat library</li>
-          <li class="constructListItem">Google Firebase Storage and Cloud Firestore</li>
-          <li class="constructListItem">Built and tested for both iOS and Android</li>
-          <li class="constructListItem">
-            <a href="https://trello.com/b/lSsCThKR/native-chat-app" target="_blank" role="menuitem"
-              class="navigation-list__item">Kanban managed</a>
-          </li>
-        </ul>
       </div>
     </div>
   </section>
@@ -124,6 +165,15 @@
   <script src="../js/promise-polyfill.js"></script>
   <script src="../js/fetch.js"></script>
   <!-- <script src="../dist/scripts.dist.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

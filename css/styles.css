@@ -3,7 +3,8 @@
 :root {
   --primary-text-color: #545d80;
   --background-dark: #83a2c7;
-  --background-light: #d7e1ed;
+  --background-vdark: #425f83;
+  --background-light: #eef5fd;
   --theme-box-shadow: #455363;
   --button-text: #fff;
   --button-blue: #0c3c8a;
@@ -198,6 +199,54 @@ textarea {
 
 /* /////////////continue with class rules/////////////// */
 
+.carousel_emboss {
+  box-shadow: 2px 2px 5px black;
+}
+
+.carousel-caption {
+  padding: 0;
+  /* border-radius: 35px; */
+  background: rgb(3, 3, 3, 0.5);
+  text-shadow: 1px 1px black;
+  font-size: x-large;
+  color: white;
+}
+
+.carousel-indicators {
+  background: var(--background-light);
+  border-radius: 25px;
+  width: 200px;
+  margin: 0 auto;
+}
+
+.carousel-indicators li {
+  background-color: var(--background-vdark);
+}
+
+.caption,
+.caption_link {
+  font-weight: var(--hdg-font-wt);
+  font-size: var(--h3-font-size);
+  font-variant: var(--body-font-variant);
+  padding: 0;
+  line-height: 1.2;
+  padding-top: 5px;
+  color: white;
+  transition: all 1s ease;
+}
+
+/* .caption_link {
+  text-decoration: underline;
+} */
+
+.caption_link:hover,
+.caption_link:focus {
+  /* remove underline/change colour
+  on hover or focus */
+  color: yellow;
+  text-decoration: underline;
+}
+
 .experience,
 .qualification {
   clear: both;
@@ -335,6 +384,7 @@ textarea {
 .constructList {
   list-style-type: square;
   margin-left:10px;
+  display: inline;
 }
 
 .constructHeading {
@@ -344,7 +394,7 @@ textarea {
 .constructListItem {
   margin-left: 5%;
   margin-right: 5%;
-  line-height: 1.6em;
+  line-height: 2em;
 }
 
 .screenShot:hover,
